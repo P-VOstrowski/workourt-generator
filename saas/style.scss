@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -10,7 +11,6 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #548CA8;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .wrapper {
@@ -38,6 +38,7 @@ h2 {
 
 h3 {
     font-size: 21px;
+    font-weight: 400;
     line-height: 26px;
     color: #FFFFFF;
 }
@@ -112,6 +113,54 @@ btn.generate_workout {
 }
 
 .body_part_section {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 7em 0;
     background: linear-gradient(180deg, #6919ED 0%, #0091FF 100%);
 
+    &__dropdown {
+        padding: 99px 0 0 36px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__dropdowns {
+        padding: 9px 33px 0 0;
+
+        &__menu {
+            width: 100%;
+            height: 34px;
+            border-radius: 5.42972px;
+            background-color: #FBFBFB;
+            background-image: url('/workout generator/arrow-down.svg');
+            background-position: 95% center;
+            background-repeat: no-repeat;
+        }
+
+        &__menu:hover {
+            cursor: pointer;
+        }
+    }
+
+    .generate_workout {
+        align-self: center;
+        width: 29%;
+        margin: 16px 0 0 0;
+        padding: 12px 0 12px 0;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 12px;
+        text-transform: uppercase;
+        background: #FCFBFB;
+        transition: background .3s, color .3s;
+    }
+
+    .generate_workout:hover {
+        cursor: pointer;
+        background: #6919ED;
+        color: #fff;
+    }
 }
